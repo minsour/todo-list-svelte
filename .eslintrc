@@ -1,0 +1,35 @@
+{
+  "extends": ["eslint:recommended", "standard"],
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "plugins": ["svelte3"],
+  "overrides": [
+    {
+      "files": ["*.svelte"],
+      "processor": "svelte3/svelte3"
+    }
+  ],
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true,
+        "code": 100,
+        "tabWidth": 2
+      }
+    ],
+    "no-multiple-empty-lines": ["error"]
+  },
+  "settings": {
+    "import/extensions": [".js"]
+  }
+}
