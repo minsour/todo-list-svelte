@@ -21,11 +21,15 @@ const addTodo = (title, description) =>
 
     return [...newList, newTodo]
   })
+
+const changeFilter = value => filterState.set(value)
+
 export {
   todoList,
   selectedTodo,
   filterState,
   filteredTodoList,
   editInputValue,
-  addTodo
+  addTodo,
+  changeFilter
 }
