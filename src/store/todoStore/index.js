@@ -56,6 +56,18 @@ const selectTodo = id => {
   })
 }
 
+const editTodo = (id, title, description) =>
+  todoList.update(list => {
+    const newList = [...list]
+    const index = newList.findIndex(todo => todo.id === id)
+
+    console.log(newList)
+    newList[index].title = title
+    newList[index].description = description
+
+    return newList
+  })
+
 export {
   todoList,
   selectedTodo,
@@ -66,5 +78,6 @@ export {
   changeFilter,
   toggleCompletion,
   removeTodo,
-  selectTodo
+  selectTodo,
+  editTodo
 }
