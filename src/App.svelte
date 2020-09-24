@@ -1,11 +1,9 @@
 <script>
-  export let name;
+  import TodoPage from "./pages/Todo";
 </script>
 
 <style>
-  h1 {
-    color: purple;
-  }
+  @import "./styles.css";
 </style>
 
-<h1>Hello {name}!</h1>
+<TodoPage />
